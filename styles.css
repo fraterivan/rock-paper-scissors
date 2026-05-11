@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    font-family: 'Press Start 2P', monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #e0e0e0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+body > * {
+    z-index: 1;
+}
+
+h1 {
+    position: absolute;
+    top: 2rem;
+    color: #ffccee;
+    text-shadow:
+        0 0 8px #ff00cc,
+        0 0 24px #ff00cc
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#scoreboard {
+    display: flex;
+    gap: 2rem;
+    color: #ffccee;
+    text-shadow:
+        0 0 8px #ff00cc,
+        0 0 24px #ff00cc
+}
+
+#choices {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.choice-btn {
+    background-color: transparent;
+    color: #00eeff;
+    border: 3px solid #00eeff;
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-shadow: 0 0 6px #00eeff;
+    box-shadow: 0 0 8px #00eeff, inset 0 0 8px rgba(0, 238, 255, 0.1);
+    transition: all 0.15s;
+}
+
+.choice-btn:hover {
+    background-color: #00eeff;
+    color: #0d0015;
+    text-shadow: none;
+    box-shadow: 0 0 18px #00eeff;
+}
+
+.choice-btn:active {
+    transform: scale(0.95);
+}
+
+#picks {
+    color: #ffccee;
+    text-shadow:
+        0 0 8px #ff00cc,
+        0 0 24px #ff00cc
+}
+
+#results {
+    position: absolute;
+    bottom: 2rem;
+    text-align: center;
+}
+
+#round-result.win {
+    color: #ffccee;
+    text-shadow: 0 0 8px #00ffaa, 0 0 24px #00ffaa;
+}
+
+#round-result.lose {
+    color: #ffccee;
+    text-shadow: 0 0 8px #ff3344, 0 0 24px #ff3344;
+}
+
+#round-result.tie {
+    color: #ffccee;
+    text-shadow: 0 0 8px #ffe566, 0 0 24px #ffe566;
+}
+
+#reset-btn {
+    margin-top: 1rem;
+    background-color: transparent;
+    color: #ff00cc;
+    border: 2px solid #ff00cc;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.6rem;
+    cursor: pointer;
+    text-shadow: 0 0 6px #ff00cc;
+    box-shadow: 0 0 8px #ff00cc, inset 0 0 8px rgba(255, 0, 204, 0.1);
+    transition: all 0.15s;
+}
+
+#reset-btn:hover {
+    background-color: #ff00cc;
+    color: #0d0015;
+    text-shadow: none;
+    box-shadow: 0 0 18px #ff00cc;
+}
+
+#reset-btn:active {
+    transform: scale(0.95);
+}
