@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "serve . --listen $PORT"
+    "start": "serve . --listen ${PORT:-3000}"
   },
   "dependencies": {
     "serve": "^14.0.0"
